@@ -13,7 +13,10 @@ from sklearn.linear_model import LinearRegression
 def importData (dataFile): 
     return True # Ask the user which Student and Task to estimate mark for
 def getWhichTask (): 
-    return True #Process # Generate an estimated mark # data is a two dimensional array of the marks and tasks # student is an integer which is which student to estimate the mark for # task is an integer which is which task to estimate the mark for
+    student = int(input("Which student to estimate the mark for : "))
+    task = int(input("Which task to estimate the mark for : "))
+    return student, task
+
 def processEstimate (data, student, task): 
     return True # Output # Simple output of the results # student is an integer which is the student to estimate the mark for # task is an integer which is which task to estimate the mark for
 
@@ -30,7 +33,8 @@ def main ():
 
     #marks = importData (dataFile)
     #print (marks)
-    #student, task = getWhichTask () #print (f’Student: {student}, Task: {task}’)
+    student, task = getWhichTask () 
+    print (f’Student: {student}, Task: {task}’)
     #estimate = processEstimate (marks, student, task)
     #showResult (student, task, estimate)
     student = 4 
